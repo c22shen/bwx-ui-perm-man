@@ -133,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "bwx-ui-perm-man"
+  "defaultProject": "bwx-ui-perm-man",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
