@@ -8,7 +8,7 @@ import { MaterialContainerComponent } from './material-container/material-contai
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MaterialTableComponent } from './material-table/material-table.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import { MaterialTableComponent } from './material-table/material-table.componen
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
