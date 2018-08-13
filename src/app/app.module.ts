@@ -1,34 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialContainerComponent } from './material-container/material-container.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { MaterialTableComponent } from './material-table/material-table.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppComponent } from './core/containers/app/app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    MaterialContainerComponent,
-    MaterialTableComponent
-  ],
+  declarations: [],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    FlexLayoutModule
+    CoreModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -136,5 +136,10 @@
   "defaultProject": "bwx-ui-perm-man",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }
