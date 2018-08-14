@@ -1,7 +1,11 @@
-import { NgModule } from '@angular/core';
+import { AuthRoutingModule } from './auth-routing.module';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+import { LoginPageComponent } from './containers/login-page/login-page.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 export const COMPONENTS = [
   LoginPageComponent,
@@ -14,6 +18,22 @@ export const COMPONENTS = [
     ReactiveFormsModule,
     MaterialModule
   ],
-  declarations: []
+  declarations: [COMPONENTS, LoginPageComponent, LoginFormComponent],
+  exports: [COMPONENTS]
 })
-export class AuthModule { }
+export class AuthModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: RootAuthModule,
+      providers: [AuthGuard],
+    };
+  }
+}
+
+@NgModule({
+  imports: [
+    AuthModule,
+    AuthRoutingModule
+  ],
+})
+export class RootAuthModule {}
