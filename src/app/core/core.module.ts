@@ -5,14 +5,14 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { AppComponent } from './containers/app/app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+// import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 export const COMPONENTS = [
   AppComponent,
   LayoutComponent,
   ToolbarComponent,
-  SidenavComponent
+  // SidenavComponent
 ];
 
 @NgModule({

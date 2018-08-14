@@ -43,7 +43,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatInputModule,
     MatCardModule,
-    MatSidenavModule,
     MatProgressSpinnerModule,
     MatSelectModule,
     FlexLayoutModule

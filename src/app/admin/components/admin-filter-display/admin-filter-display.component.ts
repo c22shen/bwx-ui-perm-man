@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Filter } from '../../models/filter';
 
 @Component({
   selector: 'app-admin-filter-display',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-filter-display.component.css']
 })
 export class AdminFilterDisplayComponent implements OnInit {
-
+  @Input() filterValues: Filter[];
+  @Output() filterValueSelection = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {

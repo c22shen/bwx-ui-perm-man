@@ -1,3 +1,20 @@
-<h1>Permission Management</h1>
-<app-admin-filter-selection></app-admin-filter-selection>
-<app-admin-filter-display></app-admin-filter-display>
+<app-sidenav [open]="true">
+        <!-- <a mat-list-item *ngFor="let group of groupsResponse">
+                <span mat-line>{{ group.groupName }}</span>
+        </a> -->
+    <mat-nav-list>
+        <a mat-list-item>
+            <span mat-line>Xiao</span>
+        </a>
+    </mat-nav-list>
+</app-sidenav>
+
+<mat-sidenav-content>
+    <h1>Permission Management</h1>
+    <app-admin-filter-selection></app-admin-filter-selection>
+    <app-admin-filter-display></app-admin-filter-display>
+</mat-sidenav-content>
+
+        <!-- <router-outlet></router-outlet> -->
+
+

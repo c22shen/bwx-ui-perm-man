@@ -1,8 +1,6 @@
 <mat-form-field>
-    <mat-select [(value)]="filterSelected">
-      <mat-option value="Roles">Roles</mat-option>
-      <mat-option value="Users">Users</mat-option>
-      <mat-option value="Permissions">Permissions</mat-option>
+    <mat-select  placeholder="Filter" [(value)]="filterSelected" (selectionChange)="filterSelection.emit($event.value)">
+      <mat-option *ngFor="let filterValue of filterValues" [value]="filterValue.id">{{ filterValue.label }}</mat-option>
     </mat-select>
   </mat-form-field>
   {{filterSelected}}

@@ -7,12 +7,14 @@ import { AdminFilterSelectionComponent } from './components/admin-filter-selecti
 import { AdminFilterDisplayComponent } from './components/admin-filter-display/admin-filter-display.component';
 import { AdminInfoSelectionComponent } from './components/admin-info-selection/admin-info-selection.component';
 import { AdminInfoDisplayComponent } from './components/admin-info-display/admin-info-display.component';
+import { SidenavComponent } from '../core/components/sidenav/sidenav.component';
 
 export const COMPONENTS = [
   AdminFilterSelectionComponent,
   AdminFilterDisplayComponent,
   AdminInfoSelectionComponent,
-  AdminInfoDisplayComponent
+  AdminInfoDisplayComponent,
+  SidenavComponent
 ];
 
 @NgModule({
