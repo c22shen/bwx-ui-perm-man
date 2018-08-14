@@ -18,10 +18,10 @@ export const COMPONENTS = [
     ReactiveFormsModule,
     MaterialModule
   ],
-  declarations: [COMPONENTS, LoginPageComponent, LoginFormComponent],
-  exports: [COMPONENTS]
+  declarations: COMPONENTS,
+  exports: COMPONENTS
 })
-export class AuthModule { 
+export class AuthModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: RootAuthModule,
