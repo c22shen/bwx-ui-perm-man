@@ -1,3 +1,4 @@
+import { MaterialTableComponent } from './components/material-table/material-table.component';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ export const COMPONENTS = [
   AdminFilterDisplayComponent,
   AdminInfoSelectionComponent,
   AdminInfoDisplayComponent,
+  MaterialTableComponent,
   SidenavComponent
 ];
 
