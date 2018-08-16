@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Login, AuthActionTypes, LoginSuccess, LoginFailure } from '../actions/auth.actions';
-import { map, mergeMap, catchError, tap } from 'rxjs/operators';
+import { map, catchError, tap, exhaustMap } from 'rxjs/operators';
 import { Authenticate } from '../models/authenticate';
 import { AuthService } from '../services/auth.service';
 import { of } from 'rxjs';
@@ -15,7 +15,7 @@ export class AuthEffects {
   login$ = this.actions$.pipe(
     ofType<Login>(AuthActionTypes.Login),
     map(action => action.payload),
-    mergeMap((auth: Authenticate) =>
+    exhaustMap((auth: Authenticate) =>
       this.authService.login(auth).pipe(
         map(user => new LoginSuccess({ user })),
         catchError(error => of(new LoginFailure(error)))
