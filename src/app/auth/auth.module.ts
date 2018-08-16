@@ -9,7 +9,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { StoreModule } from '@ngrx/store';
 import * as fromAuth from './reducers/auth.reducer';
 import { AuthService } from './services/auth.service';
-import { reducers } from './reducers/auth.reducer';
+import { reducers } from './reducers';
 
 export const COMPONENTS = [
   LoginPageComponent,
