@@ -1,11 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="stretch">
+    
+    
     <div fxLayout="row">
         <h1>Permission Management</h1>
+        <h1>{{ filterQuery$ | async}}</h1>
     </div>
     <div fxLayout="row">
         <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="20">
             <div fxLayout="column" fxLayoutAlign="start center">
-                <app-admin-filter-selection></app-admin-filter-selection>
+                <app-admin-filter-selection (filterSelection)=onfilterSelect($event)></app-admin-filter-selection>
             </div>
             <app-admin-filter-display></app-admin-filter-display>
         </div>

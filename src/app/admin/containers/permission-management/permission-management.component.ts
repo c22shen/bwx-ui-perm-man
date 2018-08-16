@@ -1,4 +1,13 @@
+import { Group } from './../../models/group';
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
+
+import * as fromAdmin from '../../reducers';
+import * as FilterActions from '../../actions/filter.actions';
+import { Filter } from '../../models/filter';
+import * as fromFilter from '../../reducers';
 
 @Component({
   selector: 'app-permission-management',
@@ -683,9 +692,16 @@ export class PermissionManagementComponent implements OnInit {
        ]
     }
  ]
-  constructor() { }
+ filterQuery$: Observable<string>;
+ groups$: Observable<Group[]>;
+ loading$: Observable<boolean>;
+ constructor(private store: Store<fromFilter.State>) { 
+    this.filterQuery$ = store.pipe(
+      select(fromFilter.getFilterQuery),
+      take(1)
+    )
+  }
 
   ngOnInit() {
   }
-
 }

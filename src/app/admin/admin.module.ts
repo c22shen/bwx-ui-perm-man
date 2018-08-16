@@ -1,3 +1,4 @@
+import { StoreModule } from '@ngrx/store';
 import { MaterialTableComponent } from './components/material-table/material-table.component';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ import { AdminFilterDisplayComponent } from './components/admin-filter-display/a
 import { AdminInfoSelectionComponent } from './components/admin-info-selection/admin-info-selection.component';
 import { AdminInfoDisplayComponent } from './components/admin-info-display/admin-info-display.component';
 import { SidenavComponent } from '../core/components/sidenav/sidenav.component';
+import { reducers } from './reducers';
 
 export const COMPONENTS = [
   AdminFilterSelectionComponent,
@@ -23,11 +25,14 @@ export const COMPONENTS = [
   imports: [
     CommonModule,
     MaterialModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+
+    StoreModule.forFeature('admin', reducers),
   ],
   declarations: [
     PermissionManagementComponent,
     ...COMPONENTS
-  ]
+  ],
+  providers: []
 })
 export class AdminModule { }

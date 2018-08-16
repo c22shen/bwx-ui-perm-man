@@ -15,7 +15,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   @Output() submitted = new EventEmitter<Authenticate>();
-  
+
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
@@ -26,3 +26,4 @@ export class LoginFormComponent implements OnInit {
       this.submitted.emit(this.form.value);
     }
   }
+}

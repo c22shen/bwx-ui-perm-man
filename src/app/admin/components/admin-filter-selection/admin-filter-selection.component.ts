@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Filter } from '../../models/filter';
 
 @Component({
   selector: 'app-admin-filter-selection',
@@ -7,7 +6,7 @@ import { Filter } from '../../models/filter';
   styleUrls: ['./admin-filter-selection.component.css']
 })
 export class AdminFilterSelectionComponent implements OnInit {
-  @Output() filterSelection = new EventEmitter<Filter>();
+  @Output() filterSelection = new EventEmitter<string>();
   filterSelected = 'ROLES';
   filterValues = [
     {id: 'ROLES', label: 'Roles'},
