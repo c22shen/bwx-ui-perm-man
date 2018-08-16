@@ -11,8 +11,7 @@ export class LoginFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  @Input() errorMessage: string | null;
 
   @Output() submitted = new EventEmitter<Authenticate>();
 
@@ -21,6 +20,7 @@ export class LoginFormComponent implements OnInit {
     password: new FormControl(''),
   });
 
+  ngOnInit() {}
   submit() {
     if (this.form.valid) {
       this.submitted.emit(this.form.value);

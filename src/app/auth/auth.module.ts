@@ -11,7 +11,7 @@ import * as fromAuth from './reducers/auth.reducer';
 import { AuthService } from './services/auth.service';
 import { reducers } from './reducers';
 
-export const COMPONENTS = [
+export const AUTHCOMPONENTS = [
   LoginPageComponent,
   LoginFormComponent
 ];
@@ -21,10 +21,9 @@ export const COMPONENTS = [
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
-    StoreModule.forFeature('auth', fromAuth.reducer)
   ],
-  declarations: COMPONENTS,
-  exports: COMPONENTS
+  declarations: AUTHCOMPONENTS,
+  exports: AUTHCOMPONENTS
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders {
