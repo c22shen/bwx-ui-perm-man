@@ -3,10 +3,9 @@ import { Group } from '../models/group';
 
 export enum FilterActionTypes {
     Filter = '[Filter] Filter',
-    FilterComplete = '[Filter] Filter Complete',
+    FilterSuccess = '[Filter] Filter Complete',
     FilterError = '[Filter] Filter Error',
-    Load = '[Filter] Load',
-    Select = '[Filter] Select'
+    FilterSelect = '[Filter] Select'
 }
 
 export class Filter implements Action {
@@ -15,8 +14,8 @@ export class Filter implements Action {
     constructor(public payload: string) {}
 }
 
-export class FilterComplete implements Action {
-    readonly type = FilterActionTypes.FilterComplete;
+export class FilterSuccess implements Action {
+    readonly type = FilterActionTypes.FilterSuccess;
 
     constructor(public payload: Group[]) {}
 }
@@ -27,7 +26,15 @@ export class FilterError implements Action {
     constructor(public payload?: any) {}
 }
 
+export class FilterSelect implements Action {
+    readonly type = FilterActionTypes.FilterSelect;
+
+    constructor(public payload: string) {}
+}
+
 export type FilterActionsUnion =
   | Filter
-  | FilterComplete
-  | FilterError;
+  | FilterSuccess
+  | FilterError
+  | FilterSelect
+  ;

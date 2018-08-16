@@ -6,13 +6,13 @@ import {
 
 import * as fromRoot from '../../reducers';
 import * as fromFilter from './filter.reducer';
-// import * as fromGroups from './groups.reducer';
+import * as fromGroups from './groups.reducer';
 // import * as fromFilterSelections from './filter-selections.reducer';
 
 
 export interface AdminState {
     filter: fromFilter.State;
-    // selections: fromSelections.State;
+    groups: fromGroups.State;
 }
 
 export interface State extends fromRoot.State {
@@ -21,7 +21,7 @@ export interface State extends fromRoot.State {
 
 export const reducers: ActionReducerMap<AdminState> = {
     filter: fromFilter.reducer,
-    // selections: fromSelections.reducer,
+    groups: fromGroups.reducer,
 };
 
 export const getAdminState = createFeatureSelector<State, AdminState>('admin');
