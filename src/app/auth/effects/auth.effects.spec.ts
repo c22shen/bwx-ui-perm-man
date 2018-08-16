@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { AuthEffects } from './auth.effects';
 
 describe('AuthEffects', () => {
-  let actions$: Observable<any>;
+  const actions$: Observable<any>;
   let effects: AuthEffects;
 
   beforeEach(() => {

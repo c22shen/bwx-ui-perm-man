@@ -25,6 +25,8 @@ export const AUTHCOMPONENTS = [
   declarations: AUTHCOMPONENTS,
   exports: AUTHCOMPONENTS
 })
+
+
 export class AuthModule {
   static forRoot(): ModuleWithProviders {
     return {
@@ -42,3 +44,5 @@ export class AuthModule {
   ],
 })
 export class RootAuthModule {}
+
+

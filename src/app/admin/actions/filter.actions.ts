@@ -11,19 +11,19 @@ export enum FilterActionTypes {
 
 export class Filter implements Action {
     readonly type = FilterActionTypes.Filter;
-  
+
     constructor(public payload: string) {}
 }
 
 export class FilterComplete implements Action {
     readonly type = FilterActionTypes.FilterComplete;
-  
+
     constructor(public payload: Group[]) {}
 }
 
 export class FilterError implements Action {
     readonly type = FilterActionTypes.FilterError;
-  
+
     constructor(public payload?: any) {}
 }
 

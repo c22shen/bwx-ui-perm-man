@@ -1,5 +1,5 @@
-import { FilterActionsUnion, FilterActionTypes } from "../actions/filter.actions";
-import { Group } from "../models/group";
+import { FilterActionsUnion, FilterActionTypes } from '../actions/filter.actions';
+import { Group } from '../models/group';
 
 export interface State {
     groups: Group[];
@@ -30,7 +30,7 @@ export function reducer(state = initialState, action: FilterActionsUnion): State
             groups: action.payload,
             loading: false,
             filter: state.filter
-           } 
+           };
         }
 
         case FilterActionTypes.FilterError: {

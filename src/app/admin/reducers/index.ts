@@ -30,7 +30,7 @@ export const getFilterState = createSelector(
     getAdminState,
     (state: AdminState) => state.filter
   );
-  
+
 
 export const getFilterQuery = createSelector(
     getFilterState,
