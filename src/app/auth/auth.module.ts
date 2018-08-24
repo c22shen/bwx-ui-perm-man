@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { AuthService } from './services/auth.service';
 import { reducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
 
 export const AUTHCOMPONENTS = [
   LoginPageComponent,
@@ -23,6 +24,7 @@ export const AUTHCOMPONENTS = [
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
+    HttpClientModule
   ],
   declarations: AUTHCOMPONENTS,
   exports: AUTHCOMPONENTS

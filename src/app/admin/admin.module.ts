@@ -11,6 +11,8 @@ import { AdminInfoSelectionComponent } from './components/admin-info-selection/a
 import { AdminInfoDisplayComponent } from './components/admin-info-display/admin-info-display.component';
 
 import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { FilterEffects } from './effects/filter.effects';
 
 export const ADMMINCOMPONENTS = [
   AdminFilterSelectionComponent,
@@ -27,6 +29,8 @@ export const ADMMINCOMPONENTS = [
     AdminRoutingModule,
 
     StoreModule.forFeature('admin', reducers),
+
+    EffectsModule.forFeature([FilterEffects]),
   ],
   declarations: [
     PermissionManagementComponent,
